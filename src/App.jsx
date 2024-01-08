@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
-import "./app.css"
-import { BrowserRouter, Routes, Route, Link, Navigate} from "react-router-dom"
+import "./App.css"
+import { BrowserRouter, Routes, Route} from "react-router-dom"
 import Home from './pages/Home'
 import Post from './pages/Post'
 import Login from './pages/Login'
