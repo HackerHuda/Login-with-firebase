@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.navbar{
+    height: 50px;
+    background-color:rgb(69, 69, 69);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.list{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.listItem{
+    margin-right: 20px;
+}
+.avatar{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.home{
+    display: flex;
+    padding: 50px 100px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    width: 30%;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 7px 11px 53px 9px rgba(0, 0, 0, 0.214);
+    border-radius: 20px;
+}
+.img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin: 20px 0px;
+}
+.desc{
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 25px;
+}
+.cardBtn{
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    padding: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.post{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.postImg{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+.postDesc{
+    padding: 0 20px;
+    font-size: 24px;
+    font-weight: 300;
+    color: gray;
+    margin-top: 40px;
+}
+.postLongDesc{
+    padding: 100px;
+    padding-top: 50px;
+    font-size: 18px;
+    line-height: 24px;
+}
+.login{
+    height: calc(100vh - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.socialIcon{
+    height: 20px;
+    margin-right: 10px;
+}
+.wrapper{
+    width: 60%;
+    height: 75%;
+    box-shadow: 7px 11px 53px 9px rgba(0, 0, 0, 0.214);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.loginButton{
+    width: 150px;
+    padding: 15px 25px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.google{
+    background-color: rgba(255, 95, 95, 0.915);
 }
-
-.App-link {
-  color: #61dafb;
+.facebook{
+    background-color: rgba(89, 191, 255, 0.823);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.github{
+    background-color: rgba(0, 0, 0, 0.551);
+}
+input{
+    width: 150px;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+.submit{
+    width: 200px;
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 5px;
+    margin: 20px;
+}
+.loginTitle{
+    position: absolute;
+    top: 150px;
+    color: #333;
+}
+.link{
+    color: inherit;
+    text-decoration: none;
+}
+.form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.number{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.otp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.otpinp{
+    display: flex;
+    justify-content: space-between;
+    color: black;
+}
+.phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.left , .right{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
 }
