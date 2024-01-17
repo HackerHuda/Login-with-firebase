@@ -3,36 +3,15 @@ import Facebook from "../img/facebook.png"
 import Github from "../img/github.png"
 import React, { useEffect, useState } from 'react'
 import {auth} from "../components/social-app/Config.js"
-import {signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, GithubAuthProvider, RecaptchaVerifier, signInWithPhoneNumber} from "firebase/auth"
+import {signInWithPopup, FacebookAuthProvider, GoogleAuthProvider, GithubAuthProvider} from "firebase/auth"
 import { Navigate } from "react-router-dom"
 import { Link } from 'react-router-dom';
-import PhoneInput from "react-phone-input-2"
-import "react-phone-input-2/lib/style.css"
-import {Button, TextField} from "@mui/material"
+import PhoneSVG from "../img/Phone.svg"
 
 export default function Login() {
   const [value,setValue]= useState('')
-  const [phone,setPhone] = useState("")
   const [user,setUser] = useState("")
-  const [otp,setOtp] = useState("")
-
-  const sendOtp= async ()=>{
-    try{
-        const recaptcha = new RecaptchaVerifier(auth,"recaptcha",{})
-        const  confirmation = await signInWithPhoneNumber(auth,phone,recaptcha)
-        setUser(confirmation)
-        console.log(confirmation)
-    }catch(err){
-        console.error(err)
-    }
-  }
-  const verifyOTP= async ()=>{
-      try{
-          await user.confirm(otp)
-      }catch(err){
-          console.error(err)
-      }
-  }
+  
 
   const signInWithGoogle=()=>{
     const Googleprovider = new GoogleAuthProvider();
@@ -86,27 +65,9 @@ export default function Login() {
           }
           </div>
           <div className='right'>
-            <div className="phone">
-              <h2>Login with phone</h2>
-              <div className="number">
-                <PhoneInput
-                country={"in"}
-                value={phone}
-                onChange={(phone)=>setPhone("+" + phone)}
-                />
-                <Button onClick={sendOtp} sx={{marginTop:"10px"}} variant="contained">Send OTP</Button>
-                <div style={{marginTop:"10px"}} id='recaptcha'></div>
-                  <br />
-                  <TextField
-                      onChange={(e)=> setOtp(e.target.value)}
-                      sx={{marginTop:"10px", width:"300px"}}
-                      variant='outlined'
-                      size='small'
-                      label="Enter OTP"
-                  />
-                  <Button onClick={verifyOTP} sx={{marginTop:"10px"}} variant='contained' color='success'>Verify OTP</Button>
-              </div>
-            </div>
+            <h3>Login with Phone Otp</h3>
+            <img src={PhoneSVG} alt="" className="phone-img" />
+            <Link to="/phone" className="submit">Login with phone</Link>
         </div>
       </div>
     </div>

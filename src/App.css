@@ -133,6 +133,10 @@ input{
     padding: 15px 20px;
     border-radius: 5px;
     margin: 20px;
+    text-decoration: none;
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 .loginTitle{
     position: absolute;
@@ -172,8 +176,15 @@ input{
     justify-content: center;
     flex-direction: column;
 }
+.phone-img{
+    width: 180px;
+    padding-bottom: 10px;
+}
 .left , .right{
     align-items: center;
     display: flex;
     flex-direction: column;
+}
+input{
+    width: 250px;
 }
