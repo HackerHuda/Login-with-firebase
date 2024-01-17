@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 export default function Navbar() {
   const [user,setUser]=useState(true)
   const logout =()=>{
-    user=false
+    setUser(false)
     localStorage.clear()
   }
   return (

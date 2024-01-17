@@ -35,7 +35,6 @@ export default function Login() {
 
     })
   }
-  
   useEffect(()=>{
     setValue(localStorage.getItem("email"))
   })

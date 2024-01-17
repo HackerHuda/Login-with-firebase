@@ -9,7 +9,7 @@ import { Navigate } from 'react-router-dom';
 export default function Phone() {
   const [phone,setPhone] = useState("")
   const [OTP,setOTP] = useState("")
-  const [user,setUser]=useState(false)
+  const [user,setUser]=useState("")
 
   const generateRecaptcha=()=>{
     window.recaptchaVerifier = new RecaptchaVerifier(auth, "recaptcha", {
@@ -40,7 +40,6 @@ export default function Phone() {
     if (otp.length === 6){
       let confirmationResult= window.confirmationResult;
       confirmationResult.confirm(OTP).then((result) => {
-      setUser(result.number)
       localStorage.setItem("user",result.number)
       }).catch((err) => {
         console.error(err)
@@ -52,7 +51,7 @@ export default function Phone() {
   })
   return (
     <div className='main'>
-      {user? <Navigate to="/"/>:
+      {!(user==="")? <Navigate to="/"/>:
           <div className='phone'>
               <h2>Login with phone</h2>
               <div className="number">
